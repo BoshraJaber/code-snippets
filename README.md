@@ -5,3 +5,7 @@ This repo contains a collection of small projects in Python
 | Project      | Link                                  |
 | ------------ | ------------------------------------- |
 | File Renamer | [Read more](File%20Renamer/README.md) |
+
+
+## Resourses:
+* [freeCodeCamp](https://www.freecodecamp.org/news)

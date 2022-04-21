@@ -15,3 +15,8 @@
 
 ### `os.rename(old_name, new_name)`
 * [Read more](https://www.tutorialspoint.com/python/os_rename.htm)
+
+
+## Notes:
+* In the path, the "\" should be changes to "/"
+* Change the path to your directory and run `python main.py` to run the code

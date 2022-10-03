@@ -14,6 +14,7 @@ final_list = [redirect + " " + i for i in website_list]
 
 while True:
     # check if time between a range , from 8:00 until 19:00
+    
     if dt(dt.now().year, dt.now().month, dt.now().day, 8) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, 19):
         print("working hours")
         with open(hosts_temp, "r+") as file:
@@ -26,6 +27,13 @@ while True:
                     # 127.0.0.1       localhost
                     file.write(redirect + " "+website + "\n")
     else:
+        with open(hosts_temp, 'r+') as file:
+            content= file.readlines()
+            file.seek(0)
+            for line in content:
+                if not any(website in line for website in website_list):
+                    file.write(line)
+            file.truncate()
         print("Fun hours")
 
     time.sleep(5)  # it will stop the code for 5 sec
